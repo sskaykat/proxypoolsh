@@ -14,3 +14,5 @@ chmod +x install.sh
 ./porxypool.sh
 # 7、端口号：12580，在手机的（设置-无线网络-ip地址）查看本机的ip，输入你的ip+端口号进入控制台
 例如：192.168.1.108:12580
+
+# 8、项目克隆于：https://github.com/shoujiyanxishe/proxypoolsh 
