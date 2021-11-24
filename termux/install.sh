@@ -1,3 +1,4 @@
+pkg up -y
 pkg i golang -y
 go get -u -v github.com/Sansui233/proxypool
 proxypool=$(ls ~/go/pkg/mod/github.com/'!sansui233')
@@ -9,3 +10,5 @@ wget -P ~/proxypool/config https://raw.githubusercontent.com/shoujiyanxishe/prox
 wget -N "https://raw.githubusercontent.com/shoujiyanxishe/proxypoolsh/main/termux/proxypool.sh"
 chmod +x proxypool.sh
 rm install.sh
+clear
+echo proxypool安装完成，输入./proxypool.sh启动
