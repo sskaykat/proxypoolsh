@@ -12,6 +12,5 @@ config=$(curl -Ls https://raw.githubusercontent.com/shoujiyanxishe/proxypoolsh/m
 source=$(curl -Ls https://raw.githubusercontent.com/shoujiyanxishe/proxypoolsh/main/termux/source.yaml) && echo "$source" > ~/proxypool/config/source.yaml
 echo "cd ~/proxypool && go run main.go -c ./config/config.yaml" > proxypool.sh
 chmod +x proxypool.sh
-rm install.sh
 clear
 echo proxypool安装完成，输入./proxypool.sh启动
