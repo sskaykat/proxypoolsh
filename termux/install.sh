@@ -13,4 +13,4 @@ source=$(curl -Ls https://raw.githubusercontent.com/shoujiyanxishe/proxypool/mai
 echo "cd ~/proxypool && go run main.go -c ./config/config.yaml" > proxypool.sh
 chmod +x proxypool.sh
 clear
-echo proxypool安装完成，输入./proxypool.sh启动
+echo proxypool安装完成，输入 ./proxypool.sh 启动
