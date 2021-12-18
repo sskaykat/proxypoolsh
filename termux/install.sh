@@ -8,8 +8,8 @@ proxypool=$(ls ~/go/pkg/mod/github.com/'!sansui233')
 chmod -R 777 ~/go/pkg/mod/github.com/'!sansui233'
 cp -r ~/go/pkg/mod/github.com/'!sansui233'/$proxypool ~/proxypool
 rm -rf ~/go/pkg/mod/github.com/'!sansui233' ~/proxypool/config/config.yaml ~/proxypool/config/source.yaml
-config=$(curl -Ls https://raw.githubusercontent.com/shoujiyanxishe/proxypoolsh/main/termux/config.yaml) && echo "$config" > ~/proxypool/config/config.yaml
-source=$(curl -Ls https://raw.githubusercontent.com/shoujiyanxishe/proxypoolsh/main/termux/source.yaml) && echo "$source" > ~/proxypool/config/source.yaml
+config=$(curl -Ls https://raw.githubusercontent.com/shoujiyanxishe/proxypool/main/termux/config.yaml) && echo "$config" > ~/proxypool/config/config.yaml
+source=$(curl -Ls https://raw.githubusercontent.com/shoujiyanxishe/proxypool/main/termux/source.yaml) && echo "$source" > ~/proxypool/config/source.yaml
 echo "cd ~/proxypool && go run main.go -c ./config/config.yaml" > proxypool.sh
 chmod +x proxypool.sh
 clear
