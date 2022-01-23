@@ -1,8 +1,11 @@
-sed -i 's@^\(deb.*stable main\)$@#\1\ndeb https://mirrors.tuna.tsinghua.edu.cn/termux/termux-packages-24 stable main@' $PREFIX/etc/apt/sources.list
-sed -i 's@^\(deb.*games stable\)$@#\1\ndeb https://mirrors.tuna.tsinghua.edu.cn/termux/game-packages-24 games stable@' $PREFIX/etc/apt/sources.list.d/game.list
-sed -i 's@^\(deb.*science stable\)$@#\1\ndeb https://mirrors.tuna.tsinghua.edu.cn/termux/science-packages-24 science stable@' $PREFIX/etc/apt/sources.list.d/science.list
-pkg up -y
-pkg i golang -y
+if [ $(command -v go | grep -c "go") -lt 1 ]
+then yum update || apt update
+yes | yum upgrade || yes | apt upgrade
+yum update || apt update
+yum install golang -y || apt install golang -y
+fi
+echo 依赖已安装，等待脚本执行
+rm -rf proxypool
 go get -u -v github.com/Sansui233/proxypool
 proxypool=$(ls ~/go/pkg/mod/github.com/'!sansui233')
 chmod -R 777 ~/go/pkg/mod/github.com/'!sansui233'
