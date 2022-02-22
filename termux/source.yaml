@@ -46,6 +46,11 @@
 # clash格式订阅链接
 - type: clash
   options:
+    url: https://pool.jinxnet.xyz/clash/proxies
+
+# clash格式订阅链接
+- type: clash
+  options:
     url: https://proxies.bihai.cf/clash/proxies
 
 # clash格式订阅链接
