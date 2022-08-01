@@ -11,7 +11,7 @@
 # clash格式订阅链接
 - type: clash
   options:
-    url: https://etproxypool.cf/clash/proxies
+    url: https://sspool.herokuapp.com/clash/proxies
 
 # clash格式订阅链接
 - type: clash
